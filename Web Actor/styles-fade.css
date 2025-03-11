@@ -1,0 +1,35 @@
+/* Estilos para los enlaces del menú */
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative; /* Necesario para posicionar la traducción */
+    display: inline-block; /* Permite animar el contenido */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    min-width: 100px; /* Ancho mínimo para evitar cortes */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilos para la palabra original y la traducción */
+.nav-menu a .original,
+.nav-menu a .translation {
+    display: inline-block;
+    transition: opacity 0.3s ease; /* Animación suave */
+}
+
+/* Oculta la traducción inicialmente */
+.nav-menu a .translation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Inicialmente invisible */
+}
+
+/* Efecto hover */
+.nav-menu a:hover .original {
+    opacity: 0; /* Oculta la palabra original */
+}
+
+.nav-menu a:hover .translation {
+    opacity: 1; /* Muestra la traducción */
+}

@@ -1,0 +1,35 @@
+/* Estilos para los enlaces del menú */
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative; /* Necesario para posicionar la traducción */
+    display: inline-block; /* Permite animar el contenido */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    min-width: 120px;
+}
+
+/* Estilos para la palabra original y la traducción */
+.nav-menu a .original,
+.nav-menu a .translation {
+    display: inline-block;
+    transition: transform 0.3s ease; /* Animación suave */
+}
+
+/* Posiciona la traducción debajo de la palabra original */
+.nav-menu a .translation {
+    position: absolute;
+    top: 100%; /* Coloca la traducción debajo */
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Efecto hover */
+.nav-menu a:hover .original {
+    transform: translateY(-100%); /* Desplaza la palabra original hacia arriba */
+}
+
+.nav-menu a:hover .translation {
+    transform: translateY(-100%); /* Desplaza la traducción hacia arriba */
+}

@@ -1,0 +1,187 @@
+/* Estilos generales */
+body {
+    font-family: "Economica", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #fff; /* Texto blanco para contrastar con el fondo */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+    background: #000; /* Fondo negro por defecto */
+}
+
+/* Clase para la imagen de fondo (solo en index.html) */
+body.index-page {
+    background: url('/img/portadaedit.png') no-repeat center center; /* Imagen de fondo */
+    background-attachment: scroll; /* Permite hacer scroll sobre la imagen */
+    background-position: center center; /* Centra la imagen */
+    background-size: cover; /* Cubre todo el fondo */
+}
+
+h1, h2, h3 {
+    font-family: "Economica", sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.0); /* Fondo transparente */
+    color: #fff;
+    padding: 20px 0;
+    position: fixed; /* Fija el header en la parte superior */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Asegura que el header esté por encima de la imagen */
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+header .logo {
+    text-align: center; /* Centra el título */
+    margin-bottom: 10px; /* Espacio entre el título y el menú */
+}
+
+header .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 6vw; /* Tamaño de fuente adaptable */
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    justify-content: center; /* Centra el menú horizontalmente */
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 1s ease; /* Transición suave para el hover */
+}
+
+.nav-menu a:hover {
+    color: #c469ad; /* Cambia el color al pasar el mouse */
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px; /* Posición a la izquierda */
+    z-index: 1001; /* Asegura que el ícono esté por encima del menú */
+    transition: transform 0.3s ease; /* Transición suave para el ícono */
+}
+
+/* Sección Hero */
+.hero {
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 80px; /* Ajuste para evitar que el header tape el contenido */
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 24px;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.2); /* Fondo semi-transparente */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    flex-shrink: 0; /* Evita que el footer se encoja */
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición suave para el hover */
+}
+
+.social-icons a:hover {
+    color: #c469ad; /* Cambia el color al pasar el mouse */
+    transform: scale(1.2); /* Aumenta el tamaño al pasar el mouse */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .logo a {
+        font-size: 8vw; /* Aumenta el tamaño de la fuente del logo en móvil */
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9); /* Fondo oscuro para el menú */
+        position: fixed; /* Fija el menú en la pantalla */
+        top: 0;
+        left: 0;
+        height: 100vh; /* Ocupa toda la altura de la pantalla */
+        padding-top: 80px; /* Espacio para el header */
+        opacity: 0; /* Inicialmente invisible */
+        transform: translateY(-20%); /* Desplazamiento inicial */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Transición suave */
+    }
+
+    .nav-menu.active {
+        display: flex;
+        opacity: 1; /* Visible */
+        transform: translateY(0); /* Sin desplazamiento */
+    }
+
+    .nav-toggle {
+        display: block;
+        left: 20px; /* Posición a la izquierda */
+        top: 20px; /* Alinea verticalmente con el título */
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+        font-size: 50px ;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}
