@@ -13,7 +13,7 @@ body {
 
 /* Clase para la imagen de fondo (solo en index.html) */
 body.index-page {
-    background: url('/img/portadaedit.png') no-repeat center center; /* Imagen de fondo */
+    background: url('/img/portadaedit.jpg') no-repeat center center; /* Imagen de fondo */
     background-attachment: scroll; /* Permite hacer scroll sobre la imagen */
     background-position: center center; /* Centra la imagen */
     background-size: cover; /* Cubre todo el fondo */
